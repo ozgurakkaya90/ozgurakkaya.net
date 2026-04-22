@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RedZone — Özgür Akkaya</title>
+  <meta name="description" content="KOBİ iç denetim birimleri için açık kaynak araç." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="rz-page">
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Özgür<span>.</span></a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">Hakkımda</a></li>
+      <li><a href="index.html#projects" class="active">RedZone</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contact">İletişim</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="rz-hero">
+  <div class="container">
+    <h1 style="margin-bottom:16px;">
+      <span>Red</span>Zone
+    </h1>
+    <p style="font-size:1.1rem; max-width:560px; margin-bottom:32px; color:rgba(255,255,255,0.65); line-height:1.8;">
+      KOBİ ölçeğindeki iç denetim birimleri için yazdım.
+      Açık kaynak, ücretsiz. Kodu GitHub'da; isteyen kurar,
+      isteyen kendi kurumuna göre uyarlar.
+    </p>
+    <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; flex-wrap:wrap;">
+      <a href="https://redzone.ozgurakkaya.net" target="_blank" rel="noopener" class="btn btn-primary">
+        Demo'yu Aç →
+      </a>
+      <a href="https://github.com/ozgurakkaya" target="_blank" rel="noopener"
+         style="color:rgba(255,255,255,0.5); font-size:0.88rem; text-decoration:underline;">
+        GitHub →
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== NEDEN YAZILDI ===== -->
+<section>
+  <div class="container" style="max-width:680px;">
+    <p class="section-label">// neden yazıldı?</p>
+    <h2 style="margin-bottom:20px;">Arka Plan</h2>
+    <p>
+      Küçük ve orta ölçekli işletmelerin iç denetim birimleri çoğunlukla
+      birkaç kişilik ekiplerden oluşur. Bulgu takibi Excel'de, risk kaydı
+      ayrı bir dosyada, etik ihbar mekanizması ya hiç yoktur ya da
+      e-posta kutusuna bırakılmıştır.
+    </p>
+    <p style="margin-top:16px;">
+      Bu durum bir sorun değil, kaynak gerçeği. Büyük kurumların lisanslı
+      GRC yazılımlarını satın alacak bütçeleri yok. RedZone bu boşluk için
+      yazıldı: karmaşık değil, sade; pahalı değil, ücretsiz.
+    </p>
+    <p style="margin-top:16px;">
+      Bir ürün değil, bir araç. Kullanılırsa iyi, eleştiri gelirse daha iyi.
+    </p>
+    <p style="margin-top:16px;">
+      Son bir not: Profesyonel bir yazılım geliştirme geçmişim yok.
+      RedZone'u büyük ölçüde Claude ile birlikte yazdım — fikri ben getirdim,
+      alan bilgisini ben koydum, kodu birlikte ürettik. Bunu saklamak yerine
+      açık söylemeyi tercih ediyorum; çünkü bu projenin kendisi de aslında
+      "alan uzmanı + yapay zeka" iş birliğinin ne kadar ileri gidebileceğini
+      test etmenin bir ürünü.
+    </p>
+  </div>
+</section>
+
+<!-- ===== NELER VAR ===== -->
+<section id="features" style="background: var(--gray-100);">
+  <div class="container">
+    <p class="section-label">// içerik</p>
+    <h2 style="margin-bottom:8px;">Neler Var?</h2>
+    <p style="margin-bottom:0; color:var(--gray-500);">Şu an çalışan modüller.</p>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Bulgu Takibi</h3>
+        <p>Denetim bulgularını kaydet, sorumlu ata, termin belirle, kapanışı takip et.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Risk Kaydı</h3>
+        <p>Fine-Kinney yöntemiyle risk puanlama, renk kodlaması ve risk sahibi atama.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📐</div>
+        <h3>Risk Kontrol Matrisi</h3>
+        <p>Her riske kontrol önlemi ekle, etkinliğini değerlendir.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚖️</div>
+        <h3>Etik İhbar Formu</h3>
+        <p>Çalışanlar login olmadan anonim bildirim yapabilir. Vakalar gizlilikle takip edilir.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🗂️</div>
+        <h3>Denetim Planı</h3>
+        <p>İç denetim programı oluştur, denetimleri planla ve sonuçlandır.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3>Rol Yönetimi</h3>
+        <p>Yönetici, denetçi ve görüntüleyici rolleriyle erişim kontrolü.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERİ ===== -->
+<section style="background: var(--gray-100);">
+  <div class="container">
+    <p class="section-label">// ekran görüntüleri</p>
+    <h2 style="margin-bottom:8px;">Arayüzden Görünüm</h2>
+    <p style="margin-bottom:32px; color:var(--gray-500);">Uygulamanın farklı modüllerinden.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="img/screenshots/dashboard.png" alt="Ana Panel" loading="lazy" />
+        <span>Ana Panel</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/risk-dashboard.png" alt="Risk Panosu" loading="lazy" />
+        <span>Risk Panosu</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/risk-list.png" alt="Risk Kaydı" loading="lazy" />
+        <span>Risk Kaydı</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/findings.png" alt="Bulgu Takibi" loading="lazy" />
+        <span>Bulgu Takibi</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/audit-list.png" alt="Denetim Planı" loading="lazy" />
+        <span>Denetim Planı</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/ethics.png" alt="Etik İhbar" loading="lazy" />
+        <span>Etik İhbar</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/rcm.png" alt="Risk Kontrol Matrisi" loading="lazy" />
+        <span>Risk Kontrol Matrisi</span>
+      </div>
+      <div class="gallery-item">
+        <img src="img/screenshots/reports.png" alt="Raporlar" loading="lazy" />
+        <span>Raporlar</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEKNİK ===== -->
+<section>
+  <div class="container">
+    <p class="section-label">// teknik</p>
+    <h2 style="margin-bottom:24px;">Nasıl Çalışıyor?</h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:600px;">
+      <div class="feature-card">
+        <p class="section-label" style="margin-bottom:12px;">Arayüz</p>
+        <div class="project-tags">
+          <span class="tag">React.js</span>
+          <span class="tag">React Router</span>
+          <span class="tag">Context API</span>
+        </div>
+      </div>
+      <div class="feature-card">
+        <p class="section-label" style="margin-bottom:12px;">Sunucu</p>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">SQLAlchemy</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:32px; max-width:560px; color:var(--gray-500); font-size:0.95rem;">
+      Kendi sunucunuza kurabilirsiniz. Kurulum talimatları GitHub'daki
+      README dosyasında.
+    </p>
+  </div>
+</section>
+
+<!-- ===== GİTHUB CTA — sade ===== -->
+<section style="background: var(--gray-100);">
+  <div class="container" style="max-width:560px; text-align:center;">
+    <p class="section-label" style="text-align:center;">// github</p>
+    <h2 style="margin-bottom:12px;">Koda bakın, sorun bildirin</h2>
+    <p style="margin-bottom:28px;">
+      Bir hata buldunuz, eksik bir şey gördünüz ya da farklı bir ihtiyacınız var?
+      GitHub'da issue açabilirsiniz.
+    </p>
+    <a href="https://github.com/ozgurakkaya" target="_blank" rel="noopener" class="btn btn-primary">
+      GitHub →
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <p>© 2026 <strong>Özgür Akkaya</strong></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

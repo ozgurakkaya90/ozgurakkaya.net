@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Özgür Akkaya</title>
+  <meta name="description" content="İç denetim, risk yönetimi ve teknoloji üzerine yazılar." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Özgür<span>.</span></a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">Hakkımda</a></li>
+      <li><a href="index.html#projects">RedZone</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#contact" class="nav-cta">İletişim</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== BLOG HERO ===== -->
+<div class="blog-hero">
+  <div class="container">
+    <p class="section-label">// yazılar</p>
+    <h1 style="margin-bottom:12px;">Yazı Blogu</h1>
+    <p style="color: var(--gray-500); max-width:480px;">
+      İş dünyası, yapay zeka ve denetim üzerine arada bir yazıyorum.
+      Rehber değil, düşünce.
+    </p>
+  </div>
+</div>
+
+<!-- ===== POST LIST ===== -->
+<section class="blog-list" style="background:var(--white);">
+  <div class="container">
+
+    <!-- Kategori filtresi -->
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;">
+      <button class="filter-btn active" data-cat="all">Tümü</button>
+      <button class="filter-btn" data-cat="tech">Yapay Zeka</button>
+      <button class="filter-btn" data-cat="denetim">İç Denetim</button>
+      <button class="filter-btn" data-cat="risk">İş Dünyası</button>
+    </div>
+
+    <!-- YAZILAR -->
+    <div class="blog-post-item" data-cat="tech">
+      <div class="blog-post-date">2025</div>
+      <div>
+        <div class="blog-meta" style="margin-bottom:8px;">
+          <span class="blog-cat">Yapay Zeka</span>
+        </div>
+        <h3 style="margin-bottom:8px;">YZ Bana Ne Yaptı?</h3>
+        <p style="font-size:0.9rem; color:var(--gray-500); margin-bottom:12px;">
+          "Bulgu yaz", "daha iyi yaz", "derin düşün", "daha da derin düşün"... Yapay zekayla kaba bir ilişkimiz var.
+          YZ kaldıracıyla iş çıktılarını artırırken hangi kasları kaybediyoruz?
+          Bir denetçinin YZ kılavuzu değil, itirafı.
+        </p>
+        <span class="blog-cat" style="cursor:pointer;">Yakında →</span>
+      </div>
+    </div>
+
+    <div class="blog-post-item" data-cat="tech">
+      <div class="blog-post-date">2025</div>
+      <div>
+        <div class="blog-meta" style="margin-bottom:8px;">
+          <span class="blog-cat">Yapay Zeka</span>
+        </div>
+        <h3 style="margin-bottom:8px;">YZ İşimizi Elimizden Alacak mı?</h3>
+        <p style="font-size:0.9rem; color:var(--gray-500); margin-bottom:12px;">
+          "İnşallah alır." — Denetim meşgalesinde nadiren temas ettiğimiz çalışma arkadaşlarının
+          "sizin işi de YZ yapacak" söylemine verdiğim tek cevap bu.
+          Peki gerçekten alacak mı?
+        </p>
+        <span class="blog-cat" style="cursor:pointer;">Yakında →</span>
+      </div>
+    </div>
+
+    <div class="blog-post-item" data-cat="tech">
+      <div class="blog-post-date">2026</div>
+      <div>
+        <div class="blog-meta" style="margin-bottom:8px;">
+          <span class="blog-cat">Yapay Zeka</span>
+        </div>
+        <h3 style="margin-bottom:8px;">Pasif Verimlilik: YZ'nin Yarattığı Sinsi Baskı</h3>
+        <p style="font-size:0.9rem; color:var(--gray-500); margin-bottom:12px;">
+          Yapay zeka kaynaklı işten çıkarma korkusu, kurumsal çalışan üzerinde içten gelen,
+          kaygıyla beslenen bir baskı yaratıyor. Bu baskı kimin işine yarıyor?
+        </p>
+        <span class="blog-cat" style="cursor:pointer;">Yakında →</span>
+      </div>
+    </div>
+
+    <div class="blog-post-item" data-cat="denetim">
+      <div class="blog-post-date">2025</div>
+      <div>
+        <div class="blog-meta" style="margin-bottom:8px;">
+          <span class="blog-cat">İç Denetim</span>
+        </div>
+        <h3 style="margin-bottom:8px;">Lacivert Çiçekler: Denetim Kongresi Üzerine</h3>
+        <p style="font-size:0.9rem; color:var(--gray-500); margin-bottom:12px;">
+          Her sonbaharda Wyndham Grand'da lacivert çiçekler açar, kongre çiçekleri.
+          Sponsorluk ve eğlenceye kurban gitmiş bir organizasyonun anatomisi.
+        </p>
+        <span class="blog-cat" style="cursor:pointer;">Yakında →</span>
+      </div>
+    </div>
+
+    <div class="blog-post-item" data-cat="risk">
+      <div class="blog-post-date">2025</div>
+      <div>
+        <div class="blog-meta" style="margin-bottom:8px;">
+          <span class="blog-cat">İş Dünyası</span>
+        </div>
+        <h3 style="margin-bottom:8px;">Tırışkadan İşler Üzerine</h3>
+        <p style="font-size:0.9rem; color:var(--gray-500); margin-bottom:12px;">
+          David Graeber'ın "Bullshit Jobs" kitabından hareketle: ne kadar topluma faydalı iş yapılıyorsa
+          o kadar değersiz, ne kadar faydasızsa o kadar prestijli. Bürokratik feodalizm bugün de yaşıyor.
+        </p>
+        <span class="blog-cat" style="cursor:pointer;">Yakında →</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <p>© 2026 <strong>Özgür Akkaya</strong></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
