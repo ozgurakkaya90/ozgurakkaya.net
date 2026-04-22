@@ -459,6 +459,57 @@ footer strong { color: #C9A84C; }
   padding-top: 4px;
 }
 
+/* === BLOG ARTICLE PAGE === */
+.article-hero {
+  background: var(--cream-dark);
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-hero .article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  margin-bottom: 28px;
+  transition: color var(--transition);
+}
+
+.article-hero .article-back:hover { color: var(--amber); }
+
+.article-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.25;
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: var(--ink-light);
+}
+
+.article-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.article-content p {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  margin-bottom: 1.6em;
+}
+
+.article-content p:first-child { color: var(--ink); }
+
 /* === REDZONE PAGE === */
 .rz-hero {
   background: linear-gradient(160deg, #0f0505 0%, #1f0808 55%, #2e0d0d 100%);
