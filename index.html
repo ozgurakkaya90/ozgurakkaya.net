@@ -5,17 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Özgür Akkaya, CPA — İç Denetim & Risk Yönetimi</title>
   <meta name="description" content="Özgür Akkaya, CPA — İç Denetim Müdürü. Risk yönetimi, uyum ve veri analitiği alanında uzman." />
+  <link rel="canonical" href="https://www.ozgurakkaya.net/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:title" content="Özgür Akkaya — Yazılar ve Projeler" />
+  <meta property="og:description" content="İç denetim, çalışma hayatı ve yapay zeka üzerine yazılar; TeklifGönder, RedZone ve Buck projeleri." />
+  <meta property="og:url" content="https://www.ozgurakkaya.net/" />
+  <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="home-page">
+<a href="#main-content" class="skip-link">İçeriğe geç</a>
 
 <!-- ===== NAV ===== -->
-<nav>
+<nav aria-label="Ana gezinme">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Özgür<span>.</span></a>
-    <div class="hamburger" id="hamburger" aria-label="Menü">
+    <button type="button" class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
-    </div>
+    </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">Hakkımda</a></li>
       <li><a href="#projects">Projeler</a></li>
@@ -25,6 +33,7 @@
   </div>
 </nav>
 
+<main id="main-content" tabindex="-1">
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
@@ -37,6 +46,7 @@
     </p>
 
     <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Projeleri gör</a>
       <a href="#about" class="btn btn-outline">
         Devamını oku
       </a>
@@ -159,6 +169,32 @@
       </div>
     </div>
 
+    <article class="project-card teklif-card" aria-labelledby="teklifgonder-title">
+      <div class="teklif-card-visual" aria-hidden="true">
+        <svg viewBox="0 0 88 104" fill="none">
+          <path d="M18 8h34l18 18v70H18z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+          <path d="M52 8v18h18M30 42h28M30 53h28M30 64h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M48 80h24m-8-8 8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>TeklifGönder</span>
+      </div>
+      <div class="project-info">
+        <h3 id="teklifgonder-title">TeklifGönder</h3>
+        <p>
+          İşletmeler için online teklif hazırlama ve takip aracı.
+          Ürün, fiyat ve koşulları bir araya getirip teklifi PDF veya
+          bağlantı olarak paylaşın; müşterinin görüntülemesini ve yanıtını takip edin.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Teklif Yönetimi</span>
+          <span class="tag">Web Uygulaması</span>
+        </div>
+        <div class="project-links">
+          <a href="https://teklifgonder.net" class="project-link">TeklifGönder’i incele →</a>
+        </div>
+      </div>
+    </article>
+
     <div class="project-card featured">
       <div class="project-visual">
         <div class="rz-logo">Red<span>/</span>Zone</div>
@@ -218,7 +254,7 @@
     </div>
 
     <div class="blog-grid">
-      <a href="blog.html" class="blog-card">
+      <a href="yazi/yapay-zeka-bana-ne-yapti.html" class="blog-card">
         <div class="blog-meta">
           <span class="blog-cat">Yapay Zeka</span>
           <span class="blog-date">2025</span>
@@ -228,7 +264,7 @@
         <span class="read-more">Oku →</span>
       </a>
 
-      <a href="blog.html" class="blog-card">
+      <a href="yazi/tiriskadan-isler-uzerine.html" class="blog-card">
         <div class="blog-meta">
           <span class="blog-cat">İş Dünyası</span>
           <span class="blog-date">2025</span>
@@ -238,7 +274,7 @@
         <span class="read-more">Oku →</span>
       </a>
 
-      <a href="blog.html" class="blog-card">
+      <a href="yazi/ic-denetim-kongresi.html" class="blog-card">
         <div class="blog-meta">
           <span class="blog-cat">İç Denetim</span>
           <span class="blog-date">2025</span>
@@ -296,48 +332,14 @@
   </div>
 </section>
 
+</main>
+
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
     <p>© 2026 <strong>Özgür Akkaya</strong></p>
   </div>
 </footer>
-
-<!-- ===== ADMIN PANEL ===== -->
-<div class="admin-panel" id="adminPanel">
-  <div class="admin-header">
-    <span class="admin-title">// yönetici</span>
-    <button class="admin-close" id="adminClose">✕</button>
-  </div>
-  <div class="admin-modules">
-    <label class="admin-module">
-      <span>Hero</span>
-      <input type="checkbox" data-module="hero">
-      <span class="toggle-track"><span class="toggle-thumb"></span></span>
-    </label>
-    <label class="admin-module">
-      <span>Hakkımda</span>
-      <input type="checkbox" data-module="about">
-      <span class="toggle-track"><span class="toggle-thumb"></span></span>
-    </label>
-    <label class="admin-module">
-      <span>RedZone</span>
-      <input type="checkbox" data-module="projects">
-      <span class="toggle-track"><span class="toggle-thumb"></span></span>
-    </label>
-    <label class="admin-module">
-      <span>Blog Yazıları</span>
-      <input type="checkbox" data-module="blog">
-      <span class="toggle-track"><span class="toggle-thumb"></span></span>
-    </label>
-    <label class="admin-module">
-      <span>İletişim</span>
-      <input type="checkbox" data-module="contact">
-      <span class="toggle-track"><span class="toggle-thumb"></span></span>
-    </label>
-  </div>
-  <div class="admin-hint">Ctrl + Shift + A</div>
-</div>
 
 <script src="js/main.js"></script>
 </body>

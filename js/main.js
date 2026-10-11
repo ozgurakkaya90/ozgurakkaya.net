@@ -7,25 +7,40 @@ const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
 if (hamburger && navLinks) {
+  const setMenuOpen = open => {
+    navLinks.classList.toggle('open', open);
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  };
+
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open');
+    setMenuOpen(hamburger.getAttribute('aria-expanded') !== 'true');
   });
 
-  // Close on link click (mobile)
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
   });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && hamburger.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      hamburger.focus();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!event.target.closest('nav')) setMenuOpen(false);
+  });
+
+  window.matchMedia('(max-width: 720px)').addEventListener('change', () => setMenuOpen(false));
 }
 
 // === Active nav link on scroll ===
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 
-if (sections.length && navItems.length) {
+if (sections.length && navItems.length && typeof window.IntersectionObserver === 'function') {
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -51,13 +66,14 @@ if (filterBtns.length) {
     btn.addEventListener('click', () => {
       const cat = btn.dataset.cat;
 
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      filterBtns.forEach(b => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-pressed', String(b === btn));
+      });
 
       postItems.forEach(item => {
         const show = cat === 'all' || item.dataset.cat === cat;
         item.style.display = show ? 'grid' : 'none';
-        if (show) item.style.animation = 'fadeIn 0.3s ease';
       });
     });
   });
@@ -68,7 +84,7 @@ const cards = document.querySelectorAll(
   '.project-card, .blog-card, .feature-card, .contact-item, .timeline-item'
 );
 
-if ('IntersectionObserver' in window) {
+if (typeof window.IntersectionObserver === 'function' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const fadeObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -116,31 +132,3 @@ if (galleryItems.length) {
     if (e.key === 'Escape') overlay.classList.remove('open');
   });
 }
-
-/* ---- Extra CSS for filter buttons (injected) ---- */
-const style = document.createElement('style');
-style.textContent = `
-  .filter-btn {
-    padding: 8px 18px;
-    border: 1.5px solid var(--gray-300);
-    border-radius: 100px;
-    background: transparent;
-    font-family: var(--font);
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    color: var(--gray-700);
-    transition: all 0.22s ease;
-  }
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: var(--red);
-    border-color: var(--red);
-    color: #fff;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-`;
-document.head.appendChild(style);

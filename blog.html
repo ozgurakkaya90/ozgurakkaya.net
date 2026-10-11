@@ -10,15 +10,15 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<nav>
+<nav aria-label="Ana gezinme">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Özgür<span>.</span></a>
-    <div class="hamburger" id="hamburger">
+    <button type="button" class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
-    </div>
+    </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html#about">Hakkımda</a></li>
-      <li><a href="index.html#projects">RedZone</a></li>
+      <li><a href="index.html#projects">Projeler</a></li>
       <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="index.html#contact" class="nav-cta">İletişim</a></li>
     </ul>
@@ -43,10 +43,10 @@
 
     <!-- Kategori filtresi -->
     <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;">
-      <button class="filter-btn active" data-cat="all">Tümü</button>
-      <button class="filter-btn" data-cat="tech">Yapay Zeka</button>
-      <button class="filter-btn" data-cat="denetim">İç Denetim</button>
-      <button class="filter-btn" data-cat="risk">İş Dünyası</button>
+      <button class="filter-btn active" data-cat="all" aria-pressed="true">Tümü</button>
+      <button class="filter-btn" data-cat="tech" aria-pressed="false">Yapay Zeka</button>
+      <button class="filter-btn" data-cat="denetim" aria-pressed="false">İç Denetim</button>
+      <button class="filter-btn" data-cat="risk" aria-pressed="false">İş Dünyası</button>
     </div>
 
     <!-- YAZILAR -->
